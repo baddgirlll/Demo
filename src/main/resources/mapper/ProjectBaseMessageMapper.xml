@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo0720.mapper.ProjectBaseMessageMapper">
+    <select id="showProjectBaseMessage" resultType="map">
+        select project_area,project_price,green_build,fire_approval_status,person_prevent,build_unit_name,supervision_unit_name,construction_unit_name
+        from project_base
+        where project_sn=#{projectCode}
+    </select>
+</mapper>

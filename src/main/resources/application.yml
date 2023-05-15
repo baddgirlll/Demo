@@ -1,0 +1,39 @@
+# DataSource Config
+server:
+  port: 8888
+Spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/a1?serverTimezone=GMT&useSSL=false
+    username: root
+    password: 123456
+
+
+mybatis-plus:
+  #给包中的类注册别名
+  type-aliases-package: com.example.demo0720.entity,com.alibaba.fastjson.JSONObject
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  #驼峰命名规则
+  configuration:
+    map-underscore-to-camel-case: true
+
+type:
+  type_1: 其他
+  type_2: 基坑工程
+  type_3: 模板工程
+  type_4: 起重吊篮
+  type_5: 暗挖工程
+  type_6: 幕墙工程
+  type_7: 脚手架工程
+  type_8: 钢结构工程
+  type_9: 人工挖孔桩工程
+
+
+
+
+
+# Logger Config
+logging:
+  level:
+    com.spring: debug
